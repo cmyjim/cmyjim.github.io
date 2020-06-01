@@ -65,6 +65,9 @@ header{
     cursor: pointer;
     transition: 0.4s;
 }
+.tab ul li a{
+   color: #fff;
+}
 .tab ul li i{
     position: relative;
     z-index: 111;
@@ -91,6 +94,44 @@ header{
 .tab ul li .active{
     top: 0;
   
+}
+/* 导航 */
+.menu{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+.menuTit{
+    width: 26px;
+    height: 25px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 24px !important;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background: #fff;
+}
+.menu .items{
+    margin-top: 40px;
+    width: 150px;
+    display: none;
+}
+.menu .items li{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background: rgb(39,137,243,0.8);
+}
+.menu .items li a{
+    color: #fff;
+}
+.menu .items li.activeItem{
+    background: #2789f3 ;
 }
 /* 主题 */
 main{
