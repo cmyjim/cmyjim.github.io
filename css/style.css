@@ -101,6 +101,7 @@ header{
     top: 10px;
     right: 10px;
     z-index: 9999;
+    display: none;
 }
 .menuTit{
     width: 26px;
@@ -293,6 +294,9 @@ footer{
 @media screen and (max-width: 800px) {
     html{
         font-size: 70px;
+    }
+    .menu{
+        display: block;
     }
    .tab{
        display: none;
