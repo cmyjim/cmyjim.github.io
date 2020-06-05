@@ -7,6 +7,18 @@
   <title>郑州市斌奎环保节能设备有限公司</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/iconfont.css">
+  
+  <style>
+   .contact-right{
+    float: right;
+     width: 76%;
+   }
+   .contact-right .map{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+   }
+  </style>
 </head>
 
 <body>
@@ -33,7 +45,36 @@
   </header>
 
   <main>
-   
+    <div class="banner">
+      <img src="../img/timg.png" alt="banner">
+    </div>
+    <div class="main">
+ 
+    
+     <div class="about-content">
+       <div class="left">
+           <div class="com-info">
+               <div class="title">
+                 <h3>联系我们</h3>
+                 <p>CONTACT US</p>
+               </div>
+               <div class="left-info">
+                 <ul>
+                   <li class="c-icon cao-mingcheng"><span >公司名称:</span><i>郑州市斌奎环保节能设备</i> </li>
+                   <li  class="c-icon cao-dianhua"><span>电话:</span><i>0371-56632083</i> </li>
+                   <li class="c-icon cao-shouji"><span >手机:</span><i>15838143467</i> </li>
+                   <li class="c-icon cao-youbian"><span >邮编:</span><i>450000</i> </li>
+                   <li class="c-icon cao-dizhi"><span >地址:</span><i>郑州市惠济区银河路3号</i> </li>
+                 </ul>
+               </div>
+           </div>
+       </div>
+       <div class="right contact-right">
+          <div id="map" class="map">
+
+          </div>
+       </div>
+  </div>
     
   </main>
   <footer>
@@ -67,6 +108,7 @@
     </div>
   </div>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&&ak=swm4nCSOkNjVAOOInnaTg6hNznPhavwK"></script>
   <script>
     $(document).ready(function () {
       $('.tab li').hover(function () {
@@ -78,8 +120,17 @@
       $('#menu').toggle()
     })
   
+  
     
 })
+// 百度地图API功能
+  var map = new BMap.Map("map");
+	var point = new BMap.Point(113.633857,34.8319);
+	map.centerAndZoom(point, 19);
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);               // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+  map.enableScrollWheelZoom(true); 
   
   </script>
 </body>
