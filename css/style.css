@@ -238,9 +238,10 @@ main{
     display: flex;
     overflow: hidden;
 }
-.about .left{
-    width: 50%;
 
+.about .left{
+    float: left;
+    width: 50%;
 }
 .about .left img{
     width: 100%;
@@ -248,7 +249,8 @@ main{
     box-sizing: border-box;
 }
 .about .right{
-    flex: 1;
+    float: left;
+    width: 50%;
     padding:0.1rem 0.2rem;
 }
 .about .right h3{
@@ -336,6 +338,69 @@ footer{
      padding: 10px;
      font-size: 14px;
    }
+   /* 产品中心 */
+   .pro-nav{
+       margin: 10px 0 20px 0;
+       background: #eee;
+   }
+   .pro-nav .item{
+       cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+   }
+   .pro-nav .item:hover{
+       background: #2789f3;
+       color: #fff;
+   }
+   .pro-nav  .itemActive{
+    background: #2789f3;
+    color: #fff;
+   }
+   .projectList{
+       width: 100%;
+        overflow: hidden;
+   }
+   .projectList .pro-item{
+       margin-bottom: 20px;
+       overflow: hidden;
+       display: none;
+   }
+   .projectList h3{
+       height: 36px;
+       line-height: 36px;
+       border-bottom: 1px solid #2789f3;
+   }
+   .pro-item ul li{
+    float: left;
+    width: 20%;
+    position: relative;
+  
+}
+   .pro-item ul li .item{
+    transition: all .2s linear;
+    text-align: center;
+    border-radius: 3px;
+    margin:0.15rem 0.1rem;
+}
+.pro-item ul li .item img{
+    display: block;
+    width: 100%;
+    height: 260px;
+}
+.pro-item ul li .item:hover{
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    -webkit-transform: translate3d(0,-2px,0);
+    transform: translate3d(0,-2px,0)
+}
+.pro-item .item p{
+    line-height: 0.4rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: #333;
+    background: rgb(243, 241, 241);
+}
+   
 @media screen and (max-width: 800px) {
     html{
         font-size: 70px;
@@ -346,15 +411,19 @@ footer{
    .tab{
        display: none;
    }
-   .proList ul li{
+   .proList ul li,.pro-item ul li{
        width: 50%;
    }
    .about{
        display: initial;
    }
    .about .left{
-       width: initial;
+       width: 100%;
    }
+   .about .right{
+    width: initial;
+   }
+  
    .about .right h3{
        margin-top: 15px;
        text-align: center;
