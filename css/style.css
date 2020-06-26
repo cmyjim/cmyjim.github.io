@@ -147,6 +147,7 @@ main{
     width: 100%;
 }
 .swiper-container{
+    height: 100%;
 }
 .swiper-slide {
     text-align: center;
@@ -219,7 +220,6 @@ main{
 .proList ul li .item img{
     display: block;
     width: 100%;
-    height: 260px;
 }
 .proList ul li .item:hover{
     -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.1);
@@ -231,8 +231,8 @@ main{
     line-height: 0.4rem;
     font-size: 0.14rem;
     font-weight: 400;
-    color: #333;
-    background: rgb(243, 241, 241);
+    color: #fff;
+    background: #2789f3;
 }
 .about{
     display: flex;
@@ -368,7 +368,7 @@ footer{
    .projectList h3{
        height: 36px;
        line-height: 36px;
-       border-bottom: 1px solid #2789f3;
+       border-bottom: 3px solid #2789f3;
    }
    .pro-item ul li{
     float: left;
@@ -385,7 +385,6 @@ footer{
 .pro-item ul li .item img{
     display: block;
     width: 100%;
-    height: 260px;
 }
 .pro-item ul li .item:hover{
     -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.1);
@@ -397,10 +396,17 @@ footer{
     line-height: 0.4rem;
     font-size: 0.14rem;
     font-weight: 400;
-    color: #333;
-    background: rgb(243, 241, 241);
+    color: #fff;
+    background: #2789f3;
 }
-   
+.pro-item .detail p{
+    text-indent: 20px;
+    line-height: 24px;
+}
+.pro-item .detail img{
+    width: 49%;
+    display: inline-block;
+}
 @media screen and (max-width: 800px) {
     html{
         font-size: 70px;
@@ -449,5 +455,14 @@ footer{
    .contact-right .map{
        padding: 5px;
        height: 200px !important;
+   }
+   .pro-item{
+       display: block !important;
+   }
+   .pro-item .proAbout{
+       padding: 0 10px;
+   }
+   .pro-item .detail img{
+       width: 100%;
    }
 }
